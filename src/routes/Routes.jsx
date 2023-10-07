@@ -4,6 +4,7 @@ import Home from "../pages/Home/Home";
 import ErrorPage from "../pages/Shared/ErrorPage";
 import Register from "../pages/Shared/Register";
 import Login from "../pages/Shared/Login";
+import Events from "../pages/Events/Events";
 
 const router = createBrowserRouter([
   {
@@ -14,7 +15,12 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch('/news.json')
+
+      },
+      {
+        path: '/categories/:id',
+        element: <Events></Events>,
+        loader: () => fetch('/event.json')
       },
       {
         path: "/register",
