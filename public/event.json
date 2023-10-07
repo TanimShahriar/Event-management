@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Wedding Event",
+    "id": "1",
+    "name": "Elegant Garden Wedding",
+    "image": "https://i.ibb.co/gjRNHL0/wedding-planner.jpg",
+    "price": "$12,000",
+    "description": "Experience the wedding of your dreams with our Elegant Garden Wedding package. Say 'I do' in a picturesque outdoor setting surrounded by lush greenery and blooming flowers. Our expert team will take care of every detail, from the stunning floral arrangements to the gourmet catering. This romantic garden wedding is the perfect choice for couples seeking a fairy-tale atmosphere for their special day. Imagine walking down a flower-lined aisle as gentle breezes carry the scent of blossoms. Enjoy a reception under the stars, surrounded by the twinkle of fairy lights. Our package includes a professional photographer to capture every special moment. Book now to create memories that will last a lifetime."
+  },
+  {
+    "title": "Birthday Party",
+    "id": "2",
+    "name": "Superhero Themed Birthday Bash",
+    "image": "https://i.ibb.co/G2j9jr3/celebrating-birthdayy.jpg",
+    "price": "$800",
+    "description": "Make your child's birthday unforgettable with our Superhero Themed Birthday Bash. Transform your home or venue into a thrilling superhero world with custom decorations and a superhero-themed cake. Our entertainment options include face painting, balloon artists, and a visit from their favorite superhero character. This action-packed party will leave your child and their friends with memories to cherish for a lifetime. From Spider-Man climbing walls to Wonder Woman face paint, the fun never ends. We even have a special superhero training session! Book now and let the adventure begin!"
+  },
+  {
+    "title": "Anniversary Celebration",
+    "id": "3",
+    "name": "Silver Anniversary Soiree",
+    "image": "https://i.ibb.co/mCyp8X1/anniversary-day.jpg",
+    "price": "$5,500",
+    "description": "Celebrate a remarkable 25 years of love and togetherness with our Silver Anniversary Soiree. This glamorous event is designed to honor your enduring commitment. Our team will create a silver-themed wonderland with elegant decor and a delectable menu featuring the finest cuisine. Share heartfelt stories and dance the night away with your closest friends and family. As the silver moonlight dances on the tables, you'll make memories to cherish forever. Our package includes a personalized silver anniversary keepsake. Make your 25th anniversary a night to remember. Book now to mark this milestone in style!"
+  },
+  {
+    "title": "Engagement Party",
+    "id": "4",
+    "name": "Romantic Rooftop Engagement",
+    "image": "https://i.ibb.co/1Xfqt1X/Engagemnet-party.jpg",
+    "price": "$2,500",
+    "description": "Begin your journey towards forever with our Romantic Rooftop Engagement package. Enjoy breathtaking views of the city skyline as you celebrate this special moment. Our team will create an intimate and romantic atmosphere with candlelit tables and gourmet cuisine that will tantalize your taste buds. Capture the magic with professional photography and create memories you'll cherish forever. As the city lights twinkle in the background, let your love story unfold. Make your engagement unforgettable. Book now!"
+  },
+  {
+    "title": "Retirement Party",
+    "id": "5",
+    "name": "Farewell Fiesta",
+    "image": "https://i.ibb.co/G27Rtrw/Retirement-party.jpg",
+    "price": "$1,200",
+    "description": "Bid farewell to a successful career with our Farewell Fiesta. Celebrate the retiree's accomplishments and contributions in style. Our event includes a lively fiesta with music, dancing, and a delicious buffet featuring a wide array of dishes. Share your well-wishes and enjoy a night of laughter and joy with friends and colleagues. Say goodbye and thank you in a memorable way. Our package includes a personalized retirement gift to commemorate the journey. Book now to honor the retiree in the grandest way possible!"
+  },
+  {
+    "title": "Baby Shower Event",
+    "id": "6",
+    "name": "Cute and Cozy Baby Shower",
+    "image": "https://i.ibb.co/7CgjxF2/Baby-shower.jpg",
+    "price": "$900",
+    "description": "Create lasting memories at a Cute and Cozy Baby Shower. Our adorable baby shower package is designed to welcome the newest member of your family. Enjoy a day filled with baby-themed decorations, games, and delicious treats. Capture the joy with a professional photographer who will immortalize every precious moment. The expectant mother will feel truly special with our pampering session. From diaper cake decorating to baby bingo, it's a day of love, laughter, and anticipation. Book now to celebrate this precious moment!"
+  }
+]

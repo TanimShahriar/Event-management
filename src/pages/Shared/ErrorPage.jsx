@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const ErrorPage = () => {
   return (
-    <div className="flex items-center justify-center h-screen">
+    <div className="flex items-center justify-center h-[600px] ">
       <div
         className="flex flex-col md:flex-row w-full md:w-[70%] items-center space-y-4"
       >
