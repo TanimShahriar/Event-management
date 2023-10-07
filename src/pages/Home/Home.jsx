@@ -1,5 +1,6 @@
 
 import Navbar from "../Shared/Navbar";
+import Banner from "../banner/Banner";
 
 
 
@@ -10,16 +11,8 @@ const Home = () => {
     <div>
 
       <Navbar></Navbar>
+      <Banner></Banner>
 
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-        <div className="">
-
-        </div>
-
-        <div className="">
-
-        </div>
-      </div>
 
     </div>
   );

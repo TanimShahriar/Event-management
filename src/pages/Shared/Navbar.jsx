@@ -43,7 +43,7 @@ const Navbar = () => {
               {navLinks}
             </ul>
           </div>
-          <img src="../../../public/Resources/event4.PNG" alt="" />
+          <img className="h-12 lg:h-24" src="../../../public/Resources/event4.PNG" alt="" />
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -51,13 +51,13 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end gap-3">
-          <CgProfile className="text-5xl cursor-pointer"></CgProfile>
+          <CgProfile className="text-2xl md:text-4xl lg:text-5xl cursor-pointer"></CgProfile>
           {
             user ?
-              <button onClick={handleSignOut} className="text-lg text-white font-semibold px-10 py-2 bg-[#403F3F]">Sign out</button>
+              <button onClick={handleSignOut} className="text-lg text-white font-semibold px-10 py-2 bg-blue-600 rounded-md">Sign out</button>
               :
               <Link to='/login'>
-                <button className="text-lg text-white font-semibold px-10 py-2 bg-green-700 rounded-md">Login</button>
+                <button className="text-sm lg:text-lg text-white font-semibold px-4 py-1 lg:px-10 lg:py-2 bg-green-700 rounded-md">Login</button>
               </Link>
           }
 
