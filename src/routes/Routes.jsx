@@ -7,6 +7,8 @@ import Login from "../pages/Shared/Login";
 import Events from "../pages/Events/Events";
 import Pricing from "../pages/Pricing/Pricing";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import VipAccess from "../pages/VipAccess/VipAccess";
+import Gallery from "../Gallery/Gallery";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +25,14 @@ const router = createBrowserRouter([
         path: '/categories/:id',
         element: <PrivateRoute><Events></Events></PrivateRoute>,
         loader: () => fetch('/event.json')
+      },
+      {
+        path: "/vip",
+        element: <PrivateRoute><VipAccess></VipAccess></PrivateRoute>,
+      },
+      {
+        path: "/gallery",
+        element: <Gallery></Gallery>
       },
       {
         path: "/pricing",

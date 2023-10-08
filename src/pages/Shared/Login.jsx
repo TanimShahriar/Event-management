@@ -5,14 +5,19 @@ import { AuthContext, auth } from "../../Provider/AuthProvider";
 import { useState } from "react";
 import { useRef } from "react";
 import { sendPasswordResetEmail, signOut } from "firebase/auth";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 // import { getAuth } from "firebase/auth";
 
 const Login = () => {
+
+  const { user } = useContext(AuthContext);
 
   const [loginError, setLoginError] = useState('');
   const [success, setSuccess] = useState('');
   const [displayUser, setDisplayUser] = useState('');
   const emailRef = useRef(null);
+  console.log(displayUser);
   // const auth = getAuth();
   const { signIn } = useContext(AuthContext);
   const { googleLogin } = useContext(AuthContext);
@@ -36,7 +41,7 @@ const Login = () => {
     signIn(email, password)
       .then(result => {
         console.log(result.user);
-        setDisplayUser(result.user);
+        setDisplayUser(notify());
 
         navigate(location?.state ? location.state : '/');
 
@@ -55,6 +60,10 @@ const Login = () => {
         setLoginError(error.message);
       })
 
+  }
+
+  const notify = () => {
+    toast("User registration successful")
   }
 
 
@@ -110,64 +119,56 @@ const Login = () => {
 
       <Navbar></Navbar>
 
-      <div className="grid lg:grid-cols-4 mt-5 ">
-
-        <div className="col-span-3 h-[670px] mx-5 lg:mx-36 lg:p-10 px-2 lg:px-16 rounded-lg bg-emerald-500">
-          <h2 className="text-center text-4xl font-semibold mt-5 mb-7 text-[#403F3F] ">Login to your account</h2> <hr />
-          <form onSubmit={handleLogin} className=" max-w-screen-md mx-auto space-y-4 ">
-            <div className="flex flex-col justify-center gap-4 ">
-              <label className="text-xl font-semibold mt-6" htmlFor="">E-mail Address</label>
-              <input className="px-4 py-4 rounded" type="email" name="email" ref={emailRef} placeholder="Enter your email address" id="" required />
-              <label className="text-xl font-semibold" htmlFor="">Password</label>
-              <input className="px-4 py-4 rounded" type="password" name="password" placeholder="Enter your password" id="" required />
-
-            </div>
-
-            <p>Forgot password? <span onClick={handleResetPassword} className="cursor-pointer text-cyan-700 underline">Reset password</span></p>
+      <div className="max-w-3xl h-[700px] mx-auto p-10 rounded-lg mt-5 bg-emerald-500">
 
 
-            <button className="w-full"> <input className="bg-blue-600 cursor-pointer text-white px-4 py-4 w-full rounded-md hover:bg-green-700 duration-200" type="submit" value="Login" /></button>
+        <h2 className="text-center text-4xl font-semibold mt-5 mb-7 text-[#403F3F] ">Login to your account</h2> <hr />
+        <form onSubmit={handleLogin} className=" mx-auto space-y-4 ">
+          <div className="flex flex-col justify-center gap-4 ">
+            <label className="text-xl font-semibold mt-6" htmlFor="">E-mail Address</label>
+            <input className="px-4 py-4 rounded" type="email" name="email" ref={emailRef} placeholder="Enter your email address" id="" required />
+            <label className="text-xl font-semibold" htmlFor="">Password</label>
+            <input className="px-4 py-4 rounded" type="password" name="password" placeholder="Enter your password" id="" required />
 
-            <p className="text-center mt-4 text-lg font-medium">Don t Have an Account? <Link to='/register' className="text-red-600 font-medium">Register</Link></p>
+          </div>
 
-            <p className="text-center">-------  or  -------</p>
-
-            <input onClick={handleGoogleLogin} className="bg-slate-700 text-white cursor-pointer px-4 py-3 hover:bg-slate-400 hover:text-black duration-200 w-full mb-4 rounded-md" type="submit" value="Sign in with Google" />
-
-          </form>
-
-          {
-            loginError &&
-            <div>
-              <h2 className="text-lg text-center font-semibold text-red-700">{loginError}</h2>
-            </div>
-          }
-
-          {
-            success &&
-            <div>
-              <h2 className="text-lg text-center font-semibold text-green-700">{success}</h2>
-            </div>
-          }
-
-        </div>
-
-        <div className="bg-slate-100 h-80 p-28 lg:p-0">
-          <h2 className="text-center text-2xl font-semibold my-4">User Information:</h2>
-          {
-            displayUser && <div className=" p-2 lg:p-4  lg:w-full ml-32 lg:ml-0 m-6">
-
-              <img className="mx-auto rounded-full mb-3" src={displayUser.photoURL} alt="" />
-              <h2 className="text-center text-lg font-semibold">{displayUser.displayName}</h2>
-              <h2 className="text-center text-lg font-semibold">{displayUser.email}</h2>
-            </div>
-          }
-        </div>
+          <p>Forgot password? <span onClick={handleResetPassword} className="cursor-pointer text-cyan-700 underline">Reset password</span></p>
 
 
-      </div >
+          <button className="w-full"> <input className="bg-blue-600 cursor-pointer text-white px-4 py-4 w-full rounded-md hover:bg-green-700 duration-200" type="submit" value="Login" /></button>
+
+          <p className="text-center mt-4 text-lg font-medium">Don t Have an Account? <Link to='/register' className="text-red-600 font-medium">Register</Link></p>
+
+          <p className="text-center">-------  or  -------</p>
+
+          <input onClick={handleGoogleLogin} className="bg-slate-700 text-white cursor-pointer px-4 py-3 hover:bg-slate-400 hover:text-black duration-200 w-full mb-4 rounded-md" type="submit" value="Sign in with Google" />
+
+        </form>
+
+        {
+          loginError &&
+          <div>
+            <h2 className="text-lg text-center font-semibold text-red-700">{loginError}</h2>
+          </div>
+        }
+
+        {
+          success &&
+          <div>
+            <h2 className="text-lg text-center font-semibold text-green-700">{success}</h2>
+          </div>
+        }
+
+      </div>
 
 
+
+
+
+
+
+
+      <ToastContainer />
 
     </div >
   );

@@ -4,23 +4,30 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 
+
 const Navbar = () => {
 
 
-  const { user, logOut } = useContext(AuthContext);
+  const { user, setUser, logOut } = useContext(AuthContext);
 
   const handleSignOut = () => {
     logOut()
-      .then()
-      .catch()
+      .then(result => {
+        console.log(result.user);
+        setUser(result.user);
+      })
+      .catch(error => {
+        console.log(error.message);
+      })
   }
+
 
   const navLinks = <>
 
     <NavLink className="focus:bg-green-700 px-3 py-1 text-xl font-semibold rounded-md focus:text-white" to='/'>Home</NavLink>
     <NavLink className="focus:bg-green-700 px-3 py-1 text-xl font-semibold rounded-md focus:text-white" to='/about'>Members</NavLink>
     <NavLink className="focus:bg-green-700 px-3 py-1 text-xl font-semibold rounded-md focus:text-white" to='/vip'>VIP-Access</NavLink>
-    <NavLink className="focus:bg-green-700 px-3 py-1 text-xl font-semibold rounded-md focus:text-white" to='/vip'>Gallery</NavLink>
+    <NavLink className="focus:bg-green-700 px-3 py-1 text-xl font-semibold rounded-md focus:text-white" to='/gallery'>Gallery</NavLink>
 
     <NavLink className="focus:bg-green-700 px-3 py-1 text-xl font-semibold rounded-md focus:text-white" to='/career'>Contact Us</NavLink>
 
@@ -51,15 +58,26 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end gap-3">
-          <CgProfile className="text-2xl md:text-4xl lg:text-5xl cursor-pointer"></CgProfile>
           {
             user ?
-              <button onClick={handleSignOut} className="lg:text-lg text-white font-light lg:font-semibold px-2 lg:px-10 p-1 lg:py-2 bg-blue-600 rounded-md">Sign out</button>
+              <img className="h-12 w-12 rounded-full" src={user.photoURL} alt="" />
+              :
+              <CgProfile className="text-2xl md:text-4xl lg:text-5xl cursor-pointer"></CgProfile>
+          }
+          {
+            user ?
+              <div className="flex items-center gap-1">
+
+                <h2 className="text-center text-lg font-semibold">{user.displayName}</h2>
+                <button onClick={handleSignOut} className="lg:text-lg text-white font-light lg:font-semibold px-2 lg:px-5 p-1 lg:py-2 bg-blue-600 rounded-md">Sign out</button>
+                <h2></h2>
+              </div>
               :
               <Link to='/login'>
                 <button className="text-sm lg:text-lg text-white font-semibold px-4 py-1 lg:px-10 lg:py-2 bg-green-700 rounded-md">Login</button>
               </Link>
           }
+
 
 
 

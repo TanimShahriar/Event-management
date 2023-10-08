@@ -4,7 +4,9 @@ import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { useState } from "react";
 import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
-import { sendEmailVerification, updateProfile } from "firebase/auth";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { updateProfile } from "firebase/auth";
 
 
 const Register = () => {
@@ -49,11 +51,16 @@ const Register = () => {
     }
 
 
+
+    const notify = () => {
+      toast("User registration successful")
+    }
+
     //create User
     createUser(email, password)
       .then(result => {
         console.log(result.user);
-        setSuccess('User created successfully');
+        setSuccess(notify())
 
         logOut(email, password)
           .then()
@@ -133,7 +140,7 @@ const Register = () => {
         <p className="text-center text-lg font-medium mt-4">Already have an account? Please <Link to='/login' className="text-white font-medium underline">Login</Link></p>
 
       </div >
-
+      <ToastContainer />
     </div >
   );
 };
