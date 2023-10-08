@@ -12,7 +12,7 @@ const Register = () => {
   const [success, setSuccess] = useState('');
   const [showPassword, setSowPassword] = useState(false);
 
-  const { createUser } = useContext(AuthContext);
+  const { createUser, logOut } = useContext(AuthContext);
 
   const handleRegister = e => {
     e.preventDefault();
@@ -39,7 +39,7 @@ const Register = () => {
     }
 
     else if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/.test(password)) {
-      setRegisterError("At least 8 characters long, Contains at least one lowercase letter, Contains at least one uppercase letter Contains at least one digit, Allows special characters")
+      setRegisterError("At least six characters long,  Contains at least one uppercase letter, Allows special characters")
       return;
     }
 
@@ -55,16 +55,19 @@ const Register = () => {
         console.log(result.user);
         setSuccess('User created successfully');
 
+        logOut(email, password)
+          .then()
+          .catch()
 
         updateProfile(result.user, {
           displayName: name,
-          photoURL: "https://i.ibb.co/vDm0dst/5.jpg"
+          photoURL: ""
         })
 
-        sendEmailVerification(result.user)
-          .then(() => {
-            alert("Please check your email and verify your email")
-          })
+        // sendEmailVerification(result.user)
+        //   .then(() => {
+        //     alert("Please check your email and verify your email")
+        //   })
 
       })
       .catch(error => {
@@ -80,7 +83,7 @@ const Register = () => {
   return (
     <div className="mt-5">
       <Navbar></Navbar>
-      <div className=" max-w-3xl h-[700px] mx-auto p-10 rounded-lg mt-5" style={{ backgroundImage: 'url(https://i.ibb.co/vDm0dst/5.jpg)' }} >
+      <div className=" max-w-3xl h-[700px] mx-auto p-10 rounded-lg mt-5 bg-emerald-500"  >
         <h2 className="text-center text-4xl font-semibold mb-2">Register your account</h2>
 
         <form onSubmit={handleRegister} className=" max-w-screen-md mx-auto space-y-4 ">
@@ -107,15 +110,15 @@ const Register = () => {
           <div className="flex gap-2">
             <input type="checkbox" name="terms" id="terms" />
             <label className="" htmlFor="terms"></label>
-            <p className="text-green-800">Accept <a href=""></a> Terms and Conditions</p>
+            <p className="">Accept <a href=""></a> Terms and Conditions</p>
           </div>
-          <input className="bg-green-600 cursor-pointer text-white px-4 py-2 w-full rounded-md hover:bg-blue-600 duration-200" type="submit" value="Register" />
+          <input className="bg-blue-600 cursor-pointer text-white px-4 py-2 w-full rounded-md hover:bg-green-700 duration-200" type="submit" value="Register" />
         </form>
 
         {
           success &&
           <div>
-            <h2 className="text-white mt-2 font-semibold">{success}</h2>
+            <h2 className="text-black mt-2 font-semibold">{success}</h2>
           </div>
         }
 
@@ -127,14 +130,11 @@ const Register = () => {
 
         }
 
+        <p className="text-center text-lg font-medium mt-4">Already have an account? Please <Link to='/login' className="text-white font-medium underline">Login</Link></p>
 
-        <p className="text-center text-lg font-medium mt-4">Already have an account? Please <Link to='/login' className="text-blue-600 font-medium">Login</Link></p>
+      </div >
 
-
-
-      </div>
-
-    </div>
+    </div >
   );
 };
 

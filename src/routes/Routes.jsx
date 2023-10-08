@@ -5,6 +5,8 @@ import ErrorPage from "../pages/Shared/ErrorPage";
 import Register from "../pages/Shared/Register";
 import Login from "../pages/Shared/Login";
 import Events from "../pages/Events/Events";
+import Pricing from "../pages/Pricing/Pricing";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -19,8 +21,13 @@ const router = createBrowserRouter([
       },
       {
         path: '/categories/:id',
-        element: <Events></Events>,
+        element: <PrivateRoute><Events></Events></PrivateRoute>,
         loader: () => fetch('/event.json')
+      },
+      {
+        path: "/pricing",
+        element: <Pricing></Pricing>
+
       },
       {
         path: "/register",

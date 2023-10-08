@@ -18,10 +18,10 @@ const Navbar = () => {
   const navLinks = <>
 
     <NavLink className="focus:bg-green-700 px-3 py-1 text-xl font-semibold rounded-md focus:text-white" to='/'>Home</NavLink>
-    <NavLink className="focus:bg-green-700 px-3 py-1 text-xl font-semibold rounded-md focus:text-white" to='/about'>Event</NavLink>
-    <NavLink className="focus:bg-green-700 px-3 py-1 text-xl font-semibold rounded-md focus:text-white" to='/career'>Services</NavLink>
-    <NavLink className="focus:bg-green-700 px-3 py-1 text-xl font-semibold rounded-md focus:text-white" to='/career'>Pricing</NavLink>
-    <NavLink className="focus:bg-green-700 px-3 py-1 text-xl font-semibold rounded-md focus:text-white" to='/career'>About</NavLink>
+    <NavLink className="focus:bg-green-700 px-3 py-1 text-xl font-semibold rounded-md focus:text-white" to='/about'>Members</NavLink>
+    <NavLink className="focus:bg-green-700 px-3 py-1 text-xl font-semibold rounded-md focus:text-white" to='/vip'>VIP-Access</NavLink>
+    <NavLink className="focus:bg-green-700 px-3 py-1 text-xl font-semibold rounded-md focus:text-white" to='/vip'>Gallery</NavLink>
+
     <NavLink className="focus:bg-green-700 px-3 py-1 text-xl font-semibold rounded-md focus:text-white" to='/career'>Contact Us</NavLink>
 
 
@@ -33,7 +33,7 @@ const Navbar = () => {
 
     <div>
 
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-base-100 ">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -54,7 +54,7 @@ const Navbar = () => {
           <CgProfile className="text-2xl md:text-4xl lg:text-5xl cursor-pointer"></CgProfile>
           {
             user ?
-              <button onClick={handleSignOut} className="text-lg text-white font-semibold px-10 py-2 bg-blue-600 rounded-md">Sign out</button>
+              <button onClick={handleSignOut} className="lg:text-lg text-white font-light lg:font-semibold px-2 lg:px-10 p-1 lg:py-2 bg-blue-600 rounded-md">Sign out</button>
               :
               <Link to='/login'>
                 <button className="text-sm lg:text-lg text-white font-semibold px-4 py-1 lg:px-10 lg:py-2 bg-green-700 rounded-md">Login</button>
