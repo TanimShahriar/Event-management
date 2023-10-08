@@ -9,6 +9,7 @@ import Pricing from "../pages/Pricing/Pricing";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import VipAccess from "../pages/VipAccess/VipAccess";
 import Gallery from "../Gallery/Gallery";
+import AboutUs from "../pages/AboutUs/AboutUs";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
         path: "/pricing",
         element: <Pricing></Pricing>
 
+      },
+      {
+        path: "/about",
+        element: <AboutUs></AboutUs>
       },
       {
         path: "/register",
