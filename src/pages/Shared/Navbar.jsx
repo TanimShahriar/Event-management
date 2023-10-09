@@ -25,7 +25,7 @@ const Navbar = () => {
   const navLinks = <>
 
     <NavLink className="focus:bg-green-700 px-3 py-1 text-xl font-semibold rounded-md focus:text-white" to='/'>Home</NavLink>
-    <NavLink className="focus:bg-green-700 px-3 py-1 text-xl font-semibold rounded-md focus:text-white" to='/member'>Members</NavLink>
+    <NavLink className="focus:bg-green-700 px-3 py-1 text-xl font-semibold rounded-md focus:text-white" to='/members'>Members</NavLink>
     <NavLink className="focus:bg-green-700 px-3 py-1 text-xl font-semibold rounded-md focus:text-white" to='/vip'>VIP-Access</NavLink>
     <NavLink className="focus:bg-green-700 px-3 py-1 text-xl font-semibold rounded-md focus:text-white" to='/gallery'>Gallery</NavLink>
 

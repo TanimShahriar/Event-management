@@ -57,13 +57,13 @@ const Login = () => {
 
       .catch(error => {
         console.error(error.message);
-        setLoginError(error.message);
+        setLoginError(notify());
       })
 
   }
 
   const notify = () => {
-    toast("User registration successful")
+    toast("Email/Password doesn't match")
   }
 
 
@@ -137,7 +137,7 @@ const Login = () => {
 
           <button className="w-full"> <input className="bg-blue-600 cursor-pointer text-white px-4 py-4 w-full rounded-md hover:bg-green-700 duration-200" type="submit" value="Login" /></button>
 
-          <p className="text-center mt-4 text-lg font-medium">Don t Have an Account? <Link to='/register' className="text-red-600 font-medium">Register</Link></p>
+          <p className="text-center mt-4 text-lg font-medium">Don't Have an Account? <Link to='/register' className="text-red-600 font-medium">Register</Link></p>
 
           <p className="text-center">-------  or  -------</p>
 

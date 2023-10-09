@@ -10,6 +10,7 @@ import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import VipAccess from "../pages/VipAccess/VipAccess";
 import Gallery from "../Gallery/Gallery";
 import AboutUs from "../pages/AboutUs/AboutUs";
+import Members from "../Members/Members";
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,12 @@ const router = createBrowserRouter([
         path: "/about",
         element: <AboutUs></AboutUs>
       },
+      {
+        path: "/members",
+        element: <PrivateRoute><Members></Members></PrivateRoute>
+
+      },
+
       {
         path: "/register",
         element: <Register></Register>
