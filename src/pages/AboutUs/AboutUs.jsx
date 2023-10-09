@@ -5,6 +5,12 @@ import Navbar from "../Shared/Navbar";
 const AboutUs = () => {
   return (
     <div className="">
+
+
+
+
+
+
       <Navbar></Navbar>
       <div className="flex justify-center  p-4 ">
         <div className="flex flex-col justify-center items-center ">
@@ -22,7 +28,7 @@ const AboutUs = () => {
                     <div className="flex items-center">
                       <div className="p-1 bg-white rounded-full">
 
-                        <img src="/public/Resources/random-1.jpg" alt=""
+                        <img src="https://i.ibb.co/WD9Db62/random-1.jpg" alt=""
                           className="rounded-full h-24 w-24" />
                       </div>
                       <div>
@@ -53,7 +59,7 @@ const AboutUs = () => {
                     <div className="flex items-center">
                       <div className="p-1 bg-white rounded-full">
 
-                        <img src="/public/Resources/random-2.jpg" alt="" className="rounded-full h-24 w-24" />
+                        <img src="https://i.ibb.co/xjf7c5c/random-6.jpg" alt="" className="rounded-full h-24 w-24" />
                       </div>
                       <div>
                         <div className="font-bold  mx-4">Elina Gilbert</div>
@@ -83,7 +89,7 @@ const AboutUs = () => {
                     <div className="flex items-center">
                       <div className="p-1 bg-white rounded-full">
 
-                        <img src="/public/Resources/random-3.jpg" alt="" className="rounded-full h-24 w-24" />
+                        <img src="https://i.ibb.co/ysxRKGc/random-3.jpg" alt="" className="rounded-full h-24 w-24" />
                       </div>
                       <div>
                         <div className="font-bold  mx-4">Mark Taylor</div>
@@ -124,7 +130,7 @@ const AboutUs = () => {
                     <div className="flex items-center">
                       <div className="p-1 bg-white rounded-full">
 
-                        <img src="/public/Resources/random-4.jpg" alt=""
+                        <img src="https://i.ibb.co/x5k35j6/random-4.jpg" alt=""
                           className="rounded-full h-24 w-24" />
                       </div>
                       <div>
@@ -155,7 +161,7 @@ const AboutUs = () => {
                     <div className="flex items-center">
                       <div className="p-1 bg-white rounded-full">
 
-                        <img src="/public/Resources/random-5.jpg" alt="" className="rounded-full h-24 w-24" />
+                        <img src="https://i.ibb.co/pzDFd60/random-5.jpg" alt="" className="rounded-full h-24 w-24" />
                       </div>
                       <div>
                         <div className="font-bold  mx-4">Mark Johnson</div>
@@ -185,7 +191,7 @@ const AboutUs = () => {
                     <div className="flex items-center">
                       <div className="p-1 bg-white rounded-full">
 
-                        <img src="/public/Resources/random-6.jpg" alt="" className="rounded-full h-24 w-24" />
+                        <img src="https://i.ibb.co/LJrQGSS/random-2.jpg " alt="" className="rounded-full h-24 w-24" />
                       </div>
                       <div>
                         <div className="font-bold  mx-4">Josh Reacher</div>
