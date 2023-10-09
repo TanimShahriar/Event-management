@@ -68,8 +68,8 @@ const Navbar = () => {
             user ?
               <div className="flex items-center gap-1">
 
-                <h2 className="text-center text-lg font-semibold">{user.displayName}</h2>
-                <button onClick={handleSignOut} className="lg:text-lg text-white font-light lg:font-semibold px-2 lg:px-5 p-1 lg:py-2 bg-blue-600 rounded-md">Sign out</button>
+                <h2 className="text-center text-sm lg:text-lg font-medium lg:font-semibold">{user.displayName}</h2>
+                <button onClick={handleSignOut} className="text-sm lg:text-lg text-white font-light lg:font-semibold px-2 lg:px-5 py-1 lg:py-2 bg-blue-600 rounded-md">Sign out</button>
                 <h2></h2>
               </div>
               :

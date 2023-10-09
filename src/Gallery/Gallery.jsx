@@ -28,6 +28,12 @@ const Gallery = () => {
         <img className="h-60 lg:h-[354px]" src="/public/Resources/Gallery-25.jpg" alt="" />
         <img className="h-60 lg:h-[354px]" src="/public/Resources/Gallery-20.jpg" alt="" />
         <img className="h-60 lg:h-[354px]" src="/public/Resources/Gallery-15.jpg" alt="" />
+        <img className="h-60 lg:h-[354px]" src="/public/Resources/Gallery-30.jpg" alt="" />
+        <img className="h-60 lg:h-[354px]" src="/public/Resources/Gallery-31.jpg" alt="" />
+        <img className="h-60 lg:h-[354px]" src="/public/Resources/Gallery-32.jpg" alt="" />
+        <img className="h-60 lg:h-[354px]" src="/public/Resources/Gallery-33.jpg" alt="" />
+        <img className="h-60 lg:h-[354px]" src="/public/Resources/Gallery-34.jpg" alt="" />
+        <img className="h-60 lg:h-[354px]" src="/public/Resources/Gallery-35.jpg" alt="" />
       </div>
     </div>
 

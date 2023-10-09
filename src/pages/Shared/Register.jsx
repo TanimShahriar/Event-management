@@ -68,7 +68,7 @@ const Register = () => {
 
         updateProfile(result.user, {
           displayName: name,
-          photoURL: ""
+          photoURL: "https://i.ibb.co/rpRCLf2/Bae-Suzy.jpg"
         })
 
         // sendEmailVerification(result.user)
