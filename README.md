@@ -1,4 +1,4 @@
-## Website name: Social Event Management
+## Project: Social Event Management
 #### Live link: https://social-event-management-ed331.web.app/
 
 ##  Project features:
